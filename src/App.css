@@ -1,0 +1,51 @@
+/* Base styles */
+.primary-bg-color {
+    background-color: #1E2D3D;
+}
+
+.text-off-color {
+    color: #607B96;
+}
+
+.light-border {
+    outline: 1px solid #607B96;
+}
+
+.App {
+    height: 100vh;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+}
+
+#logo {
+    padding: 16px 64px 16px 32px;
+    font-size: 1.25rem;
+}
+
+#nav-links {
+    display: flex;
+}
+
+.nav-link {
+    margin-top: -1;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 1.25rem;
+
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.active {
+    color: #fff;
+    border-bottom: 3px solid #FEA55F;
+}
