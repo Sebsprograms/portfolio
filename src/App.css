@@ -13,9 +13,12 @@
 
 .App {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* Navigation */
+/* NavBar */
 nav {
     display: flex;
     align-items: center;
@@ -24,8 +27,8 @@ nav {
     overflow: hidden;
 }
 
-#logo {
-    padding: 16px 64px 16px 32px;
+.tagline {
+    padding: 16px;
     font-size: 1.25rem;
 }
 
@@ -48,4 +51,36 @@ nav {
 .active {
     color: #fff;
     border-bottom: 3px solid #FEA55F;
+}
+
+/* Footer Bar */
+
+footer {
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
+}
+
+.social-icon {
+    justify-self: flex-start;
+    padding: 12px 16px;
+    font-size: 2rem;
+    display: flex;
+    text-decoration: none;
+}
+
+.github-icon {
+    margin-left: auto;
+    padding: 12px 16px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0 0 16px 0;
+}
+
+.icon-title {
+    font-size: 1.25rem;
+    padding-left: 8px;
 }
