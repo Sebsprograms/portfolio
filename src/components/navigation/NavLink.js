@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 function NavLink(props) {
     return (
-        <a className=" active light-border nav-link text-off-color" href='#'>{props.title}</a>
+        <Link className="active light-border nav-link text-off-color" to={props.path}>{props.title}</Link>
     );
 }
 

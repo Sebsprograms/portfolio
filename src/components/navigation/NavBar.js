@@ -7,7 +7,7 @@ function NavBar() {
         <nav className="primary-bg-color light-border">
             <p className="tagline text-off-color">sebastian-benad</p>
             <NavLinks />
-            <NavLink title="_contact-me" />
+            <NavLink title="_contact-me" path='contact' />
         </nav>
     );
 }

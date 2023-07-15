@@ -1,4 +1,5 @@
 import './App.css';
+import { Outlet } from "react-router-dom";
 import FooterBar from './components/navigation/FooterBar';
 import NavBar from './components/navigation/NavBar';
 
@@ -7,7 +8,7 @@ function App() {
     <div className="App primary-bg-color">
       <NavBar />
       <div id='main-body'>
-        {/* Future content will go here */}
+        <Outlet />
       </div>
       <FooterBar />
     </div>
