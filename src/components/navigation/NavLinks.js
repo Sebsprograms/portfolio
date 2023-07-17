@@ -3,9 +3,9 @@ import NavLink from "./NavLink";
 function NavLinks() {
     return (
         <div id="nav-links">
-            <NavLink title="_hello" />
-            <NavLink title="_about-me" />
-            <NavLink title="_projects" />
+            <NavLink title="_hello" path="/" />
+            <NavLink title="_about-me" path="about" />
+            <NavLink title="_projects" path="projects" />
         </div>
     );
 }
