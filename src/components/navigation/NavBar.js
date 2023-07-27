@@ -1,13 +1,51 @@
+import { useEffect, useState } from 'react';
 import NavLink from "./NavLink";
 import NavLinks from "./NavLinks";
+import Hamburger from 'hamburger-react';
+import MobileMenu from './MobileMenu';
 
 
-function NavBar() {
+function NavBar(props) {
+    function getCurrentDimension() {
+        return {
+            width: window.innerWidth,
+            height: window.innerHeight
+        }
+    }
+
+
+    const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+    useEffect(() => {
+        const updateDimension = () => {
+            setScreenSize(getCurrentDimension())
+        }
+        window.addEventListener('resize', updateDimension);
+
+        return (() => {
+            window.removeEventListener('resize', updateDimension);
+        })
+    }, [screenSize]);
+
+    const [isMenuOpen, setMenuOpen] = useState(false);
+    let isMobileWidth = screenSize.width < 1000;
+
     return (
         <nav className="primary-bg-color light-border">
-            <p className="tagline text-off-color">sebastian-benad</p>
-            <NavLinks />
-            <NavLink title="_contact-me" path='contact' />
+            <div id='nav-wrapper' className='light-border'>
+
+                <p className="tagline text-off-color">sebastian-benad</p>
+                {
+                    isMobileWidth ? <Hamburger rounded className='hamburger' color="#607B96" toggled={isMenuOpen} toggle={setMenuOpen} duration={0.8} />
+                        :
+                        (<>
+                            <NavLinks />
+                            <NavLink title="_contact-me" path='contact' />
+                        </>)
+
+                }
+            </div>
+            {(isMenuOpen && isMobileWidth) ? <MobileMenu /> : <></>}
         </nav>
     );
 }
