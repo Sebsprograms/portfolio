@@ -30,13 +30,8 @@ function FooterBar() {
                 <SocialIcon link='#' iconClass='fa-instagram' />
                 <SocialIcon link='#' iconClass='fa-facebook' />
                 <SocialIcon link='https://github.com/Sebsprograms' iconClass='fa-github' githubName="@Sebsprograms" />
-            </>) :
-                <>
-                    <SocialIcon link='#' iconClass='fa-linkedin' />
-                    <SocialIcon link='#' iconClass='fa-instagram' />
-                    <SocialIcon link='#' iconClass='fa-facebook' />
-                    <SocialIcon link='https://github.com/Sebsprograms' iconClass='fa-github' githubName={screenSize.width > 600 ? "Sebsprograms" : ""} />
-                </>}
+            </>) : <></>
+            }
         </footer>
     );
 }

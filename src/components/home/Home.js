@@ -1,6 +1,12 @@
+import './Home.css';
+
 function Home() {
     return (
-        <h1>Home</h1>
+        <div>
+
+            <div id="top-bg-splosh"></div>
+            <div id="bottom-bg-splosh"></div>
+        </div>
     );
 }
 

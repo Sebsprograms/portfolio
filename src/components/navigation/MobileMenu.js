@@ -1,13 +1,45 @@
 import React from "react";
 import NavLink from "./NavLink";
+import SocialIcon from "./SocialIcon";
+import { useState, useEffect } from "react";
 
 function MobileMenu() {
-    console.log('It is running');
+    function getCurrentDimension() {
+        return {
+            width: window.innerWidth,
+            height: window.innerHeight
+        }
+    }
+    const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+    useEffect(() => {
+        const updateDimension = () => {
+            setScreenSize(getCurrentDimension())
+        }
+        window.addEventListener('resize', updateDimension);
+
+        return (() => {
+            window.removeEventListener('resize', updateDimension);
+        })
+    }, [screenSize])
+
+    let isMobileWidth = screenSize.width > 600;
+
     return <div id="mobile-menu">
-        <NavLink title="_hello" path="/" />
-        <NavLink title="_about-me" path="about" />
-        <NavLink title="_projects" path="projects" />
-        <NavLink title="_contact-me" path='contact' />
+        <div id="mobile-links">
+
+            <NavLink title="_hello" path="/" />
+            <NavLink title="_about-me" path="about" />
+            <NavLink title="_projects" path="projects" />
+            <NavLink title="_contact-me" path='contact' />
+        </div>
+        <div id="mobile-footer" className="light-border">
+            {isMobileWidth ? <p className="tagline text-off-color">find me on:</p> : <></>}
+            <SocialIcon link='#' iconClass='fa-linkedin' />
+            <SocialIcon link='#' iconClass='fa-instagram' />
+            <SocialIcon link='#' iconClass='fa-facebook' />
+            <SocialIcon link='https://github.com/Sebsprograms' iconClass='fa-github' githubName={isMobileWidth ? "Sebsprograms" : ""} />
+        </div>
     </div>
 }
 

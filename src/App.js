@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App primary-bg-color">
       <NavBar />
-      <main id='main-body'>
+      <main id='main-body' >
         <Outlet />
       </main>
       <FooterBar />
