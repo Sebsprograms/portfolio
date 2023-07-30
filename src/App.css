@@ -23,6 +23,55 @@
     align-items: center;
 }
 
+/* Text Styles */
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+    color: #E5E9F0;
+    font-family: Fira Code;
+}
+
+
+.green-text {
+    color: #43D9AD;
+    font-family: Fira Code;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.blue-text {
+    color: #4D5BCE;
+    font-family: Fira Code;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.comment-text {
+    color: #607B96;
+    font-family: Fira Code;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+}
+
+.string-text {
+    color: #E99287;
+    font-family: Fira Code;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
 /* NavBar */
 /* Display only at this size */
 @media only screen and (max-width: 1000px) {
@@ -39,7 +88,7 @@
         justify-content: space-between;
         width: calc(100vw - 2px);
         height: calc(100vh - 57px);
-        background-color: rgba(30, 45, 61, 0.75);
+
     }
 
     #mobile-links {
@@ -50,6 +99,7 @@
     #mobile-footer {
         border-radius: 0 0 16px 16px;
         display: flex;
+        justify-content: center;
         justify-self: flex-end;
     }
 
@@ -64,6 +114,8 @@ nav {
 }
 
 #nav-wrapper {
+    z-index: 10;
+
     width: 100%;
     display: flex;
     align-items: center;
@@ -90,11 +142,11 @@ nav {
 }
 
 .nav-link:hover {
-    color: #fff;
+    color: #E5E9F0;
 }
 
 .active {
-    color: #fff;
+    color: #E5E9F0;
     box-shadow: 0 -2px 0 0 #FEA55F inset;
 }
 
@@ -145,6 +197,7 @@ footer {
 
 .icon-title {
     font-size: 1.25rem;
+    color: #607B96;
     padding-left: 8px;
 }
 
