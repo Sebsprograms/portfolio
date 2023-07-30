@@ -43,7 +43,10 @@ function Home() {
                         <h1 id='name-title'>Sebastian Benad</h1>
                         <h2 id='title-title' className='blue-text'>&gt; Full Stack Developer</h2>
                     </div>
+
                     <div id='bottom'>
+                        <div id='spacer'></div>
+                        <div id='spacer'></div>
                         <p className='comment-text'>
                             // Currently working as a Dart & Flutter developer
                         </p>
@@ -53,6 +56,7 @@ function Home() {
                         <p className='comment-text'>
                             // JavaScript, Python, React, Express, Flask, Firebase, MongoDB & more
                         </p>
+                        <div id='spacer'></div>
                         <p>
                             <span className='blue-text'>
                                 const
