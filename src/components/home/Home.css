@@ -43,6 +43,9 @@
     width: 510px;
     height: 475px;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
     border: 1px solid #0C1616;
     background: linear-gradient(154deg, rgba(23, 85, 83, 0.70) 0%, rgba(67, 217, 173, 0.09) 100%);

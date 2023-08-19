@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Home.css';
+import Snake from '../game/Snake';
 
 function Home() {
     function getCurrentDimension() {
@@ -68,7 +69,7 @@ function Home() {
 
                 </div>
                 <div id='home-game'>
-
+                    <Snake />
                 </div>
             </div>
 
