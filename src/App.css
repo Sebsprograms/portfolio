@@ -9,7 +9,28 @@
 }
 
 .light-border {
-    outline: 1px solid #607B96;
+    border: 1px solid #607B96;
+
+}
+
+.light-border-top {
+    border-top: 1px solid #607B96;
+
+}
+
+.light-border-bottom {
+    border-bottom: 1px solid #607B96;
+
+}
+
+.light-border-left {
+    border-left: 1px solid #607B96;
+
+}
+
+.light-border-right {
+    border-right: 1px solid #607B96;
+
 }
 
 

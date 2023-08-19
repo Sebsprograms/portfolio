@@ -32,7 +32,7 @@ function NavBar(props) {
 
     return (
         <nav className="primary-bg-color light-border">
-            <div id='nav-wrapper' className='light-border'>
+            <div id='nav-wrapper'>
 
                 <p className="tagline text-off-color">sebastian-benad</p>
                 {
