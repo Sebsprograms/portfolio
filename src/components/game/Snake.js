@@ -18,7 +18,7 @@ function Snake() {
     const [snake, setSnake] = useState(SNAKE_START);
     const [apple, setApple] = useState(APPLE_START);
     const [direction, setDirection] = useState([0, 1]);
-    const [speed, setSpeed] = useState(500);
+    const [speed, setSpeed] = useState(null);
     const [gameOver, setGameOver] = useState(false);
 
 
@@ -33,7 +33,7 @@ function Snake() {
         setSpeed(null);
         setGameOver(true);
     };
-    const moveSnake = ({ keyCode }) => (keyCode >= 37 || keyCode <= 40) && setDirection(DIRECTIONS[keyCode]);
+    const moveSnake = ({ keyCode }) => (keyCode >= 37 && keyCode <= 40) && setDirection(DIRECTIONS[keyCode]);
     const createApple = () => apple.map((_, i) => Math.floor(Math.random() * (CANVAS_SIZE[i]) / SCALE));
     const checkCollision = (piece, snk = snake,) => {
         if (piece[0] * SCALE >= CANVAS_SIZE[0] ||
@@ -72,9 +72,9 @@ function Snake() {
         const context = canvasRef.current.getContext("2d");
         context.setTransform(SCALE, 0, 0, SCALE, 0, 0);
         context.clearRect(0, 0, CANVAS_SIZE[0], CANVAS_SIZE[1]);
-        context.fillStyle = "pink";
+        context.fillStyle = "#43D9AD";
         snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1));
-        context.fillStyle = "lightblue";
+        context.fillStyle = "#43D9AD";
         context.fillRect(apple[0], apple[1], 1, 1);
     }, [snake, apple, gameOver]);
 
@@ -85,13 +85,44 @@ function Snake() {
     return (
         <div id="game-wrapper" role="button" tabIndex="0" onKeyDown={e => moveSnake(e)}>
             <canvas
-                style={{ border: "1px solid black" }}
+                id="game"
                 ref={canvasRef}
                 width={`${CANVAS_SIZE[0]}px`}
                 height={`${CANVAS_SIZE[1]}px`}
-            ></canvas>
-            {gameOver && <div>GAME OVER!</div>}
-            <button onClick={startGame}>Start game</button>
+            >
+            </canvas>
+            {gameOver && <div className="light-bg-box" id="game-over"><p>GAME_OVER!</p></div>}
+            <div id="stats-section">
+                <div className="light-bg-box">
+                    <p>// use keyboard</p>
+                    <p>// arrows to play</p>
+                    <div className="key-row top-key-row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="51" height="30" viewBox="0 0 51 30" fill="none">
+                            <rect x="1.46094" y="1.46356" width="48.0787" height="27.6912" rx="7.5" fill="#010C15" stroke="#1E2D3D" />
+                            <path d="M25.5 12.3091L29.75 18.3091H21.25L25.5 12.3091Z" fill="white" />
+                        </svg>
+                    </div>
+                    <div className="key-row">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" viewBox="0 0 50 30" fill="none">
+                            <rect x="49.0786" y="28.6547" width="48.0787" height="27.6912" rx="7.5" transform="rotate(-180 49.0786 28.6547)" fill="#010C15" stroke="#1E2D3D" />
+                            <path d="M22.0391 14.8091L28.0391 10.5591L28.0391 19.0592L22.0391 14.8091Z" fill="white" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="51" height="30" viewBox="0 0 51 30" fill="none">
+                            <rect x="49.5391" y="28.6547" width="48.0787" height="27.6912" rx="7.5" transform="rotate(-180 49.5391 28.6547)" fill="#010C15" stroke="#1E2D3D" />
+                            <path d="M25.5 17.8091L21.25 11.8091L29.75 11.8091L25.5 17.8091Z" fill="white" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" viewBox="0 0 50 30" fill="none">
+                            <rect x="49" y="28.6547" width="48.0787" height="27.6912" rx="7.5" transform="rotate(-180 49 28.6547)" fill="#010C15" stroke="#1E2D3D" />
+                            <path d="M27.9604 14.8091L21.9604 19.0592L21.9604 10.5591L27.9604 14.8091Z" fill="white" />
+                        </svg>
+                    </div>
+                </div>
+                <div className="light-bg-box">
+                    <p>{`Current Score: ${snake.length}`}</p>
+                </div>
+                <button id="start-game-button" onClick={startGame}>start-game</button>
+            </div>
         </div >
     );
 }
