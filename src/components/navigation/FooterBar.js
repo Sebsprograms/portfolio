@@ -26,7 +26,7 @@ function FooterBar() {
 
         (screenSize.width > 1000) ? (
             <footer className="primary-bg-color light-border">
-                <p className="tagline text-off-color">find me on:</p>
+                <p className="tagline-footer text-off-color">find me on:</p>
                 <SocialIcon link='#' iconClass='fa-linkedin' />
                 <SocialIcon link='#' iconClass='fa-instagram' />
                 <SocialIcon link='#' iconClass='fa-facebook' />

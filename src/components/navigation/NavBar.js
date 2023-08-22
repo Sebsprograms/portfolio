@@ -33,20 +33,21 @@ function NavBar(props) {
     return (
         <nav className="primary-bg-color light-border">
             <div id='nav-wrapper'>
-
-                <p className="tagline text-off-color">sebastian-benad</p>
+                <div className="tagline">
+                    <p className="text-off-color">sebastian-benad</p>
+                </div>
                 {
                     isMobileWidth ? <Hamburger rounded className='hamburger' color="#607B96" toggled={isMenuOpen} toggle={setMenuOpen} duration={0.8} />
                         :
-                        (<>
+                        (<div id='link-bar'>
                             <NavLinks />
                             <NavLink title="_contact-me" path='contact' />
-                        </>)
+                        </div>)
 
                 }
             </div>
             {(isMenuOpen && isMobileWidth) ? <MobileMenu /> : <></>}
-        </nav>
+        </nav >
     );
 }
 

@@ -34,11 +34,11 @@ function MobileMenu() {
             <NavLink title="_contact-me" path='contact' />
         </div>
         <div id="mobile-footer" className="light-border">
-            {isMobileWidth ? <p className="tagline text-off-color">find me on:</p> : <></>}
-            <SocialIcon link='#' iconClass='fa-linkedin' />
-            <SocialIcon link='#' iconClass='fa-instagram' />
-            <SocialIcon link='#' iconClass='fa-facebook' />
-            <SocialIcon link='https://github.com/Sebsprograms' iconClass='fa-github' githubName={isMobileWidth ? "Sebsprograms" : ""} />
+            {isMobileWidth ? <p className="tagline-footer text-off-color">find me on:</p> : <></>}
+            <SocialIcon windowWidth={getCurrentDimension().width} link='#' iconClass='fa-linkedin' />
+            <SocialIcon windowWidth={getCurrentDimension().width} link='#' iconClass='fa-instagram' />
+            <SocialIcon windowWidth={getCurrentDimension().width} link='#' iconClass='fa-facebook' />
+            <SocialIcon windowWidth={getCurrentDimension().width} link='https://github.com/Sebsprograms' iconClass='fa-github' githubName={isMobileWidth ? "Sebsprograms" : ""} />
         </div>
     </div>
 }
