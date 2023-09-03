@@ -10,7 +10,7 @@ function AboutMenuBottom({ showPersonalInfo }) {
     }
     return (
         <div id='about-menu-bottom'>
-            <div onClick={toggleContact} className={`light-border-bottom ${showPersonalInfo ? 'light-border-top' : ''} info-bar`}>{showContact ? <i className="menu-icon fa-solid fa-angle-down"></i> : <i className="menu-icon fa-solid fa-angle-right"></i>}<p>contact</p></div>
+            <div onClick={toggleContact} className={`light-border-bottom ${showPersonalInfo ? 'light-border-top' : ''} info-bar info-bar-inset`}>{showContact ? <i className="menu-icon fa-solid fa-angle-down"></i> : <i className="menu-icon fa-solid fa-angle-right"></i>}<p>contact</p></div>
             <div style={showContactStyle} id='about-contact'>
                 <FileItem icon="fa-phone" title="+1 403 461-5459" />
                 <FileItem icon="fa-envelope" title="sebastianbenad72@gmail.com" />

@@ -13,7 +13,7 @@ function AboutMenuTop({ showPersonalInfo, togglePersonalInfo, addActiveTab }) {
 
     return (
         <div id='about-menu-top'>
-            <div onClick={togglePersonalInfo} className='light-border-bottom info-bar'>{showPersonalInfo ? <i className="menu-icon fa-solid fa-angle-down"></i> : <i className="menu-icon fa-solid fa-angle-right"></i>}<p>personal-info</p></div>
+            <div onClick={togglePersonalInfo} className='light-border-bottom info-bar-inset info-bar'>{showPersonalInfo ? <i className="menu-icon fa-solid fa-angle-down"></i> : <i className="menu-icon fa-solid fa-angle-right"></i>}<p>personal-info</p></div>
             <div style={personalInfoStyle} id='about-menu-folders'>
                 <FileItem title="about" icon="fa-file" colorClass="icon-red" addActiveTab={addActiveTab} />
                 <FileItem title="experience" icon="fa-file-word" colorClass="icon-green" addActiveTab={addActiveTab} />
