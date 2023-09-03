@@ -1,10 +1,10 @@
 import React from "react";
 
-function Tab(props) {
-    const handleClick = props.handleClick;
-    const closeTab = props.closeTab;
-    const title = props.title;
+function Tab({ handleClick, closeTab, title }) {
     return (<div className="tab">
-        <div className="tab-title">{props.title}</div>
+        <div onClick={handleClick} className="tab-title">{title}</div>
+        <i onClick={() => closeTab(title)} class="fa-solid fa-x"></i>
     </div>);
 }
+
+export default Tab;
