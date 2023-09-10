@@ -1,6 +1,6 @@
 function AboutContent(props) {
     return (<div>
-        Test
+        About
     </div>);
 }
 
