@@ -7,9 +7,9 @@ function LeftBar() {
 
     return (
         <div id='about-leftbar'>
-            <i className="fa-solid fa-code"></i>
-            <i className="fa-solid fa-code-branch"></i>
-            <i className="fa-regular fa-file-code"></i>
+            <i className="left-bar-icon fa-solid fa-code"></i>
+            <i className="left-bar-icon fa-solid fa-code-branch"></i>
+            <i className="left-bar-icon fa-regular fa-file-code"></i>
         </div>
     );
 }

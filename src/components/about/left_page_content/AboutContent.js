@@ -4,4 +4,4 @@ function AboutContent(props) {
     </div>);
 }
 
-export default AboutContent;
+export default AboutContent;    

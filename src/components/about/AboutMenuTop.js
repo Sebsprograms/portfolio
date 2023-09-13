@@ -23,11 +23,13 @@ function AboutMenuTop({ showPersonalInfo, togglePersonalInfo, addActiveTab }) {
                     <p>credentials</p>
                 </div>
                 {showCredentials && (
-                    <ul>
-                        <li onClick={() => addActiveTab('c1')}>Certificate 1</li>
-                        <li onClick={() => addActiveTab('c2')}>Certificate 2</li>
-                        <li onClick={() => addActiveTab('c3')}>Certificate 3</li>
-                    </ul>
+                    <div>
+                        <FileItem title="code_foundations" icon="fa-award" colorClass="icon-yellow" addActiveTab={addActiveTab} />
+                        <FileItem title="full_stack_development" icon="fa-award" colorClass="icon-yellow" addActiveTab={addActiveTab} />
+                        <FileItem title="github" icon="fa-award" colorClass="icon-yellow" addActiveTab={addActiveTab} />
+                        <FileItem title="javascript" icon="fa-award" colorClass="icon-yellow" addActiveTab={addActiveTab} />
+                        <FileItem title="learn_to_code" icon="fa-award" colorClass="icon-yellow" addActiveTab={addActiveTab} />
+                    </div>
                 )}
             </div>
         </div>
